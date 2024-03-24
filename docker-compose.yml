@@ -33,6 +33,7 @@ services:
   memcached:
     image: memcached:alpine
     container_name: memcached
+    restart: always
     ports:
       - "127.0.0.1:11211:11211"
     environment:
