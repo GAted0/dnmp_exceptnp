@@ -38,3 +38,16 @@ services:
       - "127.0.0.1:11211:11211"
     environment:
        MEMCACHED_CACHE_SIZE: "128"
+
+  # postgres:
+  #   image: postgres:alpine
+  #   container_name: postgres
+  #   ports:
+  #     - "5432:5432"
+  #   environment:
+  #     POSTGRES_USER: username
+  #     POSTGRES_PASSWORD: password
+  #     PGDATA: /var/lib/postgresql/data
+  #   volumes:
+  #     - ./postgresql/data:/var/lib/postgresql/data/:rw
+  #   restart: always
