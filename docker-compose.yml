@@ -27,10 +27,10 @@ services:
     ports:
       - "127.0.0.1:6379:6379"
     volumes:
-      - ./redis/conf/redis.conf:/etc/redis.conf:ro
+      - ./redis/conf/redis.conf:/usr/local/etc/redis/redis.conf:ro
       - ./redis/data:/data/:rw
     restart: always
-    entrypoint: ["redis-server", "/etc/redis.conf"]
+    entrypoint: ["redis-server", "/usr/local/etc/redis/redis.conf"]
     environment:
       TZ: "Asia/Shanghai"
     networks:
