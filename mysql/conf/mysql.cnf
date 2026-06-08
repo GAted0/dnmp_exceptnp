@@ -2,7 +2,6 @@
 port                    = 3306
 default-character-set   = utf8mb4
 
-
 [mysqld]
 user                    = mysql
 port                    = 3306
@@ -14,7 +13,7 @@ character-set-server    = utf8mb4
 collation-server        = utf8mb4_unicode_ci
 init_connect            = 'SET NAMES utf8mb4'
 
-disable-log-bin
+skip-log-bin
 skip-character-set-client-handshake
 explicit_defaults_for_timestamp
 
