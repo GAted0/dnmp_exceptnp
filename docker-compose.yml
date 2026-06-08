@@ -22,7 +22,7 @@ services:
 
   redis:
     # image: redis:7.2-alpine
-    image: redis:alpine
+    image: redis:8-alpine
     container_name: redis
     ports:
       - "127.0.0.1:6379:6379"
@@ -30,7 +30,8 @@ services:
       - ./redis/conf/redis.conf:/usr/local/etc/redis/redis.conf:ro
       - ./redis/data:/data/:rw
     restart: always
-    entrypoint: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    # entrypoint: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"] 
     environment:
       TZ: "Asia/Shanghai"
     networks:
